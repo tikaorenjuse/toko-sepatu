@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cuci Sepatu Bontang — Bersih, Cepat, Rapih</title>
+  <meta name="description" content="Cuci Sepatu Bontang — layanan cuci & perawatan sepatu di Bontang. Antar-jemput, gosok, neutralisasi bau, quick service." />
+  <!-- Tailwind CDN (production-ready small usage) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Simple icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👟</text></svg>">
+  <style>
+    /* Small custom styles */
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(34,197,94,0.12), rgba(59,130,246,0.06));
+    }
+    /* gallery hover */
+    .gallery-item:hover img { transform: scale(1.04); }
+    .transition-smooth { transition: all 250ms ease; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center text-white text-xl">👟</div>
+          <div>
+            <div class="font-bold">Cuci Sepatu Bontang</div>
+            <div class="text-xs text-gray-500 -mt-1">Bersih • Cepat • Rapih</div>
+          </div>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex gap-6 items-center text-sm">
+        <a href="#layanan" class="hover:text-blue-600 transition-smooth">Layanan</a>
+        <a href="#harga" class="hover:text-blue-600 transition-smooth">Harga</a>
+        <a href="#galeri" class="hover:text-blue-600 transition-smooth">Galeri</a>
+        <a href="#kontak" class="hover:text-blue-600 transition-smooth">Kontak</a>
+        <a href="#pesan" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:opacity-95 transition-smooth">Pesan Sekarang</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="btnMenu" aria-label="Buka menu" class="p-2 rounded-md hover:bg-gray-100">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="menuMobile" class="hidden md:hidden px-4 pb-4">
+      <div class="flex flex-col gap-3 text-sm">
+        <a href="#layanan">Layanan</a>
+        <a href="#harga">Harga</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#kontak">Kontak</a>
+        <a href="#pesan" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg inline-block text-center">Pesan Sekarang</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero-bg">
+      <div class="max-w-6xl mx-auto px-4 py-16 grid gap-8 md:grid-cols-2 items-center">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-extrabold">Cuci Sepatu Bontang</h1>
+          <p class="mt-4 text-gray-600">Layanan cuci sepatu profesional di Bontang: cuci, perawatan, pewarnaan ulang ringan, dan antar-jemput. 👟✨</p>
+
+          <ul class="mt-6 flex flex-col gap-2 text-sm">
+            <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Cepat: 24–48 jam (opsi express)</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Aman: proses ramah material</li>
+            <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Gratis konsultasi perawatan</li>
+          </ul>
+
+          <div class="mt-6 flex gap-3">
+            <a href="#pesan" class="bg-blue-600 text-white px-5 py-3 rounded-lg shadow">Pesan Sekarang</a>
+            <a href="tel:+6281234567890" class="border border-blue-600 text-blue-600 px-5 py-3 rounded-lg">Telepon</a>
+            <a href="https://wa.me/6281234567890?text=Halo%20Cuci%20Sepatu%20Bontang%2C%20saya%20ingin%20memesan" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg bg-green-500 text-white">WhatsApp</a>
+          </div>
+
+          <div class="mt-6 text-xs text-gray-500">Lokasi: Bontang, Kalimantan Timur — antar-jemput tersedia untuk area kota.</div>
+        </div>
+
+        <div class="flex justify-center">
+          <!-- hero image (placeholder unsplash) -->
+          <img src="https://images.unsplash.com/photo-1601924582971-7b6d0b5f7ec5?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=4c6b5a9b2f7d8a2c4d5b6e7f8a9b0c1d" alt="Ilustrasi cuci sepatu" class="rounded-2xl shadow-lg w-full max-w-md object-cover transition-smooth">
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="layanan" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl font-bold">Layanan Kami</h2>
+      <p class="text-gray-600 mt-2">Pilih layanan sesuai kebutuhan sepatu Anda.</p>
+
+      <div class="mt-6 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- card -->
+        <article class="bg-white p-5 rounded-xl shadow-sm">
+          <h3 class="font-semibold">Cuci Standar</h3>
+          <p class="text-sm text-gray-500 mt-1">Pembersihan kotoran, sikat, pengeringan alami.</p>
+          <ul class="mt-3 text-sm space-y-1 text-gray-600">
+            <li>• Pembersihan luar</li>
+            <li>• Care ringan</li>
+            <li>• Est. 1–2 hari</li>
+          </ul>
+          <div class="mt-4 font-bold">Mulai Rp 25.000</div>
+        </article>
+
+        <article class="bg-white p-5 rounded-xl shadow-sm">
+          <h3 class="font-semibold">Deep Clean + Deodorize</h3>
+          <p class="text-sm text-gray-500 mt-1">Perawatan mendalam, pelepasan sol, dan penghilangan bau.</p>
+          <ul class="mt-3 text-sm space-y-1 text-gray-600">
+            <li>• Perawatan bagian dalam</li>
+            <li>• Pembersihan noda membandel</li>
+            <li>• Est. 2–3 hari</li>
+          </ul>
+          <div class="mt-4 font-bold">Mulai Rp 45.000</div>
+        </article>
+
+        <article class="bg-white p-5 rounded-xl shadow-sm">
+          <h3 class="font-semibold">Restorasi & Pewarnaan Ringan</h3>
+          <p class="text-sm text-gray-500 mt-1">Perbaikan warna dan finishing untuk sepatu kulit/kanvas.</p>
+          <ul class="mt-3 text-sm space-y-1 text-gray-600">
+            <li>• Retouch warna</li>
+            <li>• Perapihan jahitan ringan</li>
+            <li>• Est. 3–5 hari</li>
+          </ul>
+          <div class="mt-4 font-bold">Mulai Rp 75.000</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="harga" class="bg-white/60 py-10">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl font-bold">Daftar Harga (Contoh)</h2>
+        <p class="text-gray-600 mt-1">Harga final tergantung kondisi sepatu; ini harga acuan.</p>
+
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="p-4 bg-white rounded-lg shadow-sm">
+            <div class="text-sm text-gray-500">Sneakers</div>
+            <div class="text-xl font-bold mt-2">Rp 35.000</div>
+            <div class="text-xs text-gray-500 mt-1">Cuci standar</div>
+          </div>
+          <div class="p-4 bg-white rounded-lg shadow-sm">
+            <div class="text-sm text-gray-500">Sepatu Kulit</div>
+            <div class="text-xl font-bold mt-2">Rp 50.000</div>
+            <div class="text-xs text-gray-500 mt-1">Deep clean + finishing</div>
+          </div>
+          <div class="p-4 bg-white rounded-lg shadow-sm">
+            <div class="text-sm text-gray-500">Sepatu Anak</div>
+            <div class="text-xl font-bold mt-2">Rp 25.000</div>
+            <div class="text-xs text-gray-500 mt-1">Express tersedia</div>
+          </div>
+          <div class="p-4 bg-white rounded-lg shadow-sm">
+            <div class="text-sm text-gray-500">Pewarnaan / Restore</div>
+            <div class="text-xl font-bold mt-2">Rp 100.000+</div>
+            <div class="text-xs text-gray-500 mt-1">Tergantung tingkat perbaikan</div>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-gray-500">*Harga belum termasuk ongkos antar-jemput (jika ada).</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="galeri" class="max-w-6xl mx-auto px-4 py-12">
+      <h2 class="text-2xl font-bold">Galeri Sebelum & Sesudah</h2>
+      <p class="text-gray-600 mt-2">Contoh pekerjaan kami — klik untuk lihat lebih jelas.</p>
+
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <!-- gallery items: placeholder images -->
+        <figure class="gallery-item overflow-hidden rounded-xl shadow-sm transition-smooth">
+          <img src="https://images.unsplash.com/photo-1520975929705-06a7f1b1b1a6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcdef" alt="Sebelum - sepatu kotor" class="w-full h-40 object-cover transition-smooth">
+        </figure>
+        <figure class="gallery-item overflow-hidden rounded-xl shadow-sm transition-smooth">
+          <img src="https://images.unsplash.com/photo-1587502536263-3b0b7e6a0f1b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=ghijkl" alt="Sesudah - sepatu bersih" class="w-full h-40 object-cover transition-smooth">
+        </figure>
+        <figure class="gallery-item overflow-hidden rounded-xl shadow-sm transition-smooth">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=mnopqr" alt="Proses perawatan" class="w-full h-40 object-cover transition-smooth">
+        </figure>
+        <figure class="gallery-item overflow-hidden rounded-xl shadow-sm transition-smooth">
+          <img src="https://images.unsplash.com/photo-1585386959984-a4155229d7e2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=stuvwx" alt="Antar-jemput paket" class="w-full h-40 object-cover transition-smooth">
+        </figure>
+        <figure class="gallery-item overflow-hidden rounded-xl shadow-sm transition-smooth">
+          <img src="https://images.unsplash.com/photo-1593032465173-2f3b5d9f1ee6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=yzabcd" alt="Detail finishing" class="w-full h-40 object-cover transition-smooth">
+        </figure>
+        <figure class="gallery-item overflow-hidden rounded-xl shadow-sm transition-smooth">
+          <img src="https://images.unsplash.com/photo-1610970869095-d3b0f9a20b4b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=efghij" alt="Pengemasan setelah bersih" class="w-full h-40 object-cover transition-smooth">
+        </figure>
+      </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section id="pesan" class="bg-gradient-to-r from-white to-blue-50 py-12">
+      <div class="max-w-4xl mx-auto px-4 bg-white rounded-xl shadow p-6">
+        <h2 class="text-xl font-bold">Form Pemesanan / Booking</h2>
+        <p class="text-sm text-gray-600 mt-1">Isi data, kami akan konfirmasi via WhatsApp/telepon.</p>
+
+        <form id="bookingForm" class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4" novalidate>
+          <div>
+            <label class="text-sm font-medium">Nama</label>
+            <input id="name" name="name" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="Nama lengkap" />
+            <p class="text-xs text-red-600 mt-1 hidden" id="err-name">Nama wajib diisi.</p>
+          </div>
+
+          <div>
+            <label class="text-sm font-medium">No. Telepon / WhatsApp</label>
+            <input id="phone" name="phone" inputmode="tel" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="08xxxxxxxxxx" />
+            <p class="text-xs text-red-600 mt-1 hidden" id="err-phone">Nomor telepon tidak valid.</p>
+          </div>
+
+          <div class="md:col-span-2">
+            <label class="text-sm font-medium">Alamat (untuk antar-jemput)</label>
+            <input id="address" name="address" class="mt-1 block w-full border rounded px-3 py-2" placeholder="Jl. Contoh No. 12, Bontang" />
+          </div>
+
+          <div>
+            <label class="text-sm font-medium">Jenis Layanan</label>
+            <select id="service" name="service" class="mt-1 block w-full border rounded px-3 py-2">
+              <option value="standar">Cuci Standar — Rp 35.000</option>
+              <option value="deep">Deep Clean — Rp 45.000</option>
+              <option value="restore">Restorasi — Rp 100.000+</option>
+              <option value="antarjemput">Antar-Jemput (+ biaya)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-sm font-medium">Jumlah Pasang</label>
+            <input id="qty" name="qty" type="number" min="1" step="1" value="1" class="mt-1 block w-full border rounded px-3 py-2" />
+          </div>
+
+          <div class="md:col-span-2">
+            <label class="text-sm font-medium">Catatan</label>
+            <textarea id="notes" name="notes" rows="3" class="mt-1 block w-full border rounded px-3 py-2" placeholder="Misal: sepatu kulit, noda tinta di bagian kanan"></textarea>
+          </div>
+
+          <div class="md:col-span-2 flex gap-3 items-center">
+            <button id="submitBtn" type="submit" class="bg-blue-600 text-white px-5 py-2 rounded-lg">Kirim Pesanan</button>
+            <div id="formMsg" class="text-sm text-gray-600"></div>
+          </div>
+        </form>
+
+        <p class="mt-3 text-xs text-gray-500">Dengan mengirim, kami akan menghubungi via WA/telepon untuk konfirmasi & estimasi biaya.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT & MAP -->
+    <section id="kontak" class="max-w-6xl mx-auto px-4 py-12 grid gap-6 md:grid-cols-2">
+      <div>
+        <h3 class="text-lg font-bold">Kontak</h3>
+        <p class="text-gray-600 mt-1">Hubungi kami untuk tanya-tanya atau pesan cepat.</p>
+
+        <ul class="mt-4 space-y-3 text-sm text-gray-700">
+          <li><strong>Telepon / WA:</strong> <a href="tel:+6281234567890" class="text-blue-600">+62 812-3456-7890</a></li>
+          <li><strong>Email:</strong> <a href="mailto:info@cucisepatubontang.id" class="text-blue-600">info@cucisepatubontang.id</a></li>
+          <li><strong>Jam Operasional:</strong> Senin–Sabtu, 09:00–18:00</li>
+          <li><strong>Alamat:</strong> Bontang (detail akan dikonfirmasi saat pemesanan)</li>
+        </ul>
+
+        <div class="mt-6 flex gap-3">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" class="text-sm">Instagram</a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" class="text-sm">Facebook</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold">Lokasi (contoh)</h3>
+        <p class="text-sm text-gray-500 mt-1">Peta di bawah hanya contoh — ganti dengan lokasi usaha Anda.</p>
+        <!-- Example Google Maps iframe centered roughly on Bontang (replace with your place_id or embed code) -->
+        <div class="mt-4 w-full h-64 bg-gray-100 rounded-lg overflow-hidden shadow">
+          <iframe title="Peta Cuci Sepatu Bontang" class="w-full h-full" loading="lazy"
+            src="https://www.google.com/maps?q=Bontang,+Kalimantan+Timur&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white/90 border-t mt-8">
+    <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+      <div>&copy; <span id="year"></span> Cuci Sepatu Bontang — Semua hak dilindungi.</div>
+      <div class="mt-2 md:mt-0">Designed with ❤️ — Hubungi <a href="tel:+6281234567890" class="text-blue-600">+62 812-3456-7890</a></div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Basic interactivity: mobile menu toggle
+    const btnMenu = document.getElementById('btnMenu');
+    const menuMobile = document.getElementById('menuMobile');
+    btnMenu?.addEventListener('click', () => {
+      menuMobile.classList.toggle('hidden');
+    });
+
+    // set year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple form validation + create WA message on submit (demo behavior)
+    const bookingForm = document.getElementById('bookingForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formMsg = document.getElementById('formMsg');
+
+    function validatePhone(phone) {
+      // Basic Indonesia phone check: starts with 08 and 9-13 digits total
+      const cleaned = phone.replace(/\s|\-|\+|[()]/g,'');
+      return /^08\d{7,12}$/.test(cleaned);
+    }
+
+    bookingForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formMsg.textContent = '';
+      // fields
+      const name = document.getElementById('name');
+      const phone = document.getElementById('phone');
+      const service = document.getElementById('service');
+      const qty = document.getElementById('qty');
+      const address = document.getElementById('address');
+      const notes = document.getElementById('notes');
+
+      // simple validation
+      let ok = true;
+      if (!name.value.trim()) {
+        document.getElementById('err-name').classList.remove('hidden'); ok = false;
+      } else document.getElementById('err-name').classList.add('hidden');
+
+      if (!validatePhone(phone.value.trim())) {
+        document.getElementById('err-phone').classList.remove('hidden'); ok = false;
+      } else document.getElementById('err-phone').classList.add('hidden');
+
+      if (!ok) {
+        formMsg.textContent = 'Periksa kembali data yang wajib diisi.';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Mengirim...';
+
+      // Build a WhatsApp message for quick confirmation (user will be redirected to WA)
+      const waNumber = '6281234567890'; // Ganti dengan nomor bisnis (format internasional tanpa +)
+      const text = encodeURIComponent(
+        `Pesanan Cuci Sepatu Bontang%0ANama: ${name.value.trim()}%0ANo: ${phone.value.trim()}%0ALayanan: ${service.options[service.selectedIndex].text}%0AJumlah: ${qty.value}%0AAlamat: ${address.value.trim()}%0ANotes: ${notes.value.trim()}`
+      );
+      const waUrl = `https://wa.me/${waNumber}?text=${text}`;
+
+      // small UX: open WA in new tab
+      window.open(waUrl, '_blank');
+
+      formMsg.textContent = 'Pesanan dikirim ke WhatsApp untuk konfirmasi. Terima kasih!';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Kirim Pesanan';
+      bookingForm.reset();
+    });
+
+    // Accessibility: focus styles for keyboard users
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') document.documentElement.classList.add('user-is-tabbing');
+    });
+  </script>
+</body>
+</html>
